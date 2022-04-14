@@ -11,6 +11,10 @@ hr {
     margin-bottom: 15px;
 }
 
+.tipos {
+    display: none;
+}
+
 .form {
     padding: 30px 10px;
     width: 1100px;    

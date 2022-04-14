@@ -1,13 +1,12 @@
 <?php
 
 $endereco = 'localhost';
-$banco = 'agenda';
+$banco = 'Agenda_contatos';
 $usuario = 'postgres';
-$senha = '123';
+$senha = 'root';
 
 
-
-$con = pg_connect("host=$endereco dbname=$banco user=$usuario password=$senha port=5433")
+$con = pg_connect("host=$endereco dbname=$banco user=$usuario password=$senha port=5432")
 or die ("Sem conexão\n");
 
 //echo "Conectado no banco de dados!";
