@@ -1,6 +1,6 @@
 <?php
 
-class ClienteModefa
+class ClienteModel
 {
     public $id,$nome,$idPessoa_fisica,$idPessoa_juridica,$idEndereco;
 

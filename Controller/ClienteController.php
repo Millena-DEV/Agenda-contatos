@@ -9,7 +9,10 @@ public static function form (){
 }
 
 public static function save(){
-    var_dump($_POST);
+    include 'Model/ClienteModel.php';
+    $model = new ClienteModel();
+    $model-> nome = $_Post ['name'];
+$model -> save();
 }
 
 

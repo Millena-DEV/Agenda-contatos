@@ -12,11 +12,12 @@ class ClienteDAO
         
     
 
-    public function insert (){
+    public function insert (ClienteModel $model){
+
 
     }
 
-    public function updat(){
+    public function update(ClienteModel $model){
 
     }
 
