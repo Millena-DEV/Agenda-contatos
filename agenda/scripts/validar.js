@@ -1,3 +1,4 @@
+/*
 function validar(){
     var nome = form.nome.value;
     var email = form.email.value;
@@ -20,7 +21,7 @@ function validar(){
         form.telefone.focus();
         return false;
     }
-}
+} */
 
 function Pessoa(tipo) {
     if (tipo=="fisica") {
