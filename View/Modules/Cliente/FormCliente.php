@@ -6,13 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Cadastro de contatos </title>
 
-    <link rel="stylesheet" href="./styles/form.css">
-    <script src="./scripts/validar.js"> </script>
+    <link rel="stylesheet" href="../../../components/styles/form.css">
+    <script src="../../../components/scripts/validar.js"> </script>
 </head>
 
 <?php
 
-include 'conectar.php';
+//include 'components/styles/form.css';
+//include 'components/scripts/validar.js';
+// include 'agenda/conectar.php';
 
 ?>
 
@@ -20,7 +22,7 @@ include 'conectar.php';
 
     <h1> Cadastro de contato </h1> <hr>
 
-    <form name="form" class="form" action="cadastro.php" method="post">
+    <form name="form" class="form" action="../../../DAO/ClienteDAO.php" method="post">
 
         <!-- tipo pessoa -->
             <div class="form-group">
@@ -42,7 +44,7 @@ include 'conectar.php';
                           
               <div class="form-areas">
                 <label for="cpf"> CPF: </label>
-                <input type="number" class="form-input" id="cpf" name="cpf" required>
+                <input type="text" class="form-input" maxlenght="14" id="cpf" name="cpf" required>
               </div>
             </div>
 
@@ -54,7 +56,7 @@ include 'conectar.php';
                             
                 <div class="form-areas">
                   <label for="cnpj"> CNPJ: </label>
-                  <input type="numbe" class="form-input" id="cnpj" name="cnpj" required>
+                  <input type="text" class="form-input" maxlenght="16" id="cnpj" name="cnpj" required>
                 </div>
             </div>
 

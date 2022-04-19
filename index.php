@@ -1,6 +1,6 @@
 <?php
 
-include 'conectar.php';
+include './agenda/conectar.php';
 
 $buscar_cadastros = "select * from contatos";
 $query_cadastros = pg_query($con, $buscar_cadastros);
@@ -17,14 +17,14 @@ $query_cadastros = pg_query($con, $buscar_cadastros);
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <link rel="stylesheet" href="./styles/styles.css">
+    <link rel="stylesheet" href="./components/styles/styles.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
 
 </head>
 
 <body>
     <div class='container'>
-        <a href="form.php" target=""><button class="new">Novo</button></a>
+        <a href="./View/Modules/Cliente/FormCliente.php" target=""><button class="new">Novo</button></a>
         <table id="tabela">
             <thead>
                 <tr>
@@ -39,7 +39,7 @@ $query_cadastros = pg_query($con, $buscar_cadastros);
                 </tr>
             </thead>
             <tbody>
-
+<!--  -->
                 <?php
 
                 while ($receber_cadastros = pg_fetch_array($query_cadastros)) {

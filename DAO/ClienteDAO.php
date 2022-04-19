@@ -6,10 +6,9 @@ class ClienteDAO
 
 
     public function __construct()
-    {
-        
-        $dsn = "pgsql:host=localhost;port=5432;dbname=Agenda_banco";
-          $conexao =new PDO('dsn', 'root', '1234');
+    {        
+        $dsn = "pgsql:host=localhost;port=5432;dbname=Agenda_contatos";
+          $conexao =new PDO('dsn', 'postgres', 'root');
     }
 
 
@@ -30,10 +29,10 @@ class ClienteDAO
     public function select()
     {
         $sql = "SELECT * FROM cliente";
-        $stm = $this ->conexao -> prepare($sql)->execute();
+        $stm = $this->conexao->prepare($sql)->execute();
         
 
-        return $stm -> fetcALL(PDO::FETCH_CLASS);
+        return $stm->fetcALL(PDO::FETCH_CLASS);
     }
 
     public function delete()
