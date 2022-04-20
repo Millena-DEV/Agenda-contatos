@@ -2,7 +2,7 @@
 
 class EnderecoModel
 {
-    public $id,$cep,$numero,$cidade,$bairro;
+    public $idEndereco,$cep,$numero,$cidade,$bairro;
 public $rows;
     public function save(){
         include 'DAO/EnderecoDAO.php';

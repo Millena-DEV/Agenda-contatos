@@ -17,6 +17,7 @@ class EnderecoDAO
 
     public function insert(EnderecoModel $model)
     {
+        
         $sql = "INSERT INTO endereco(cep,numero,cidade,bairro) values (?,?,?,?)";
         $stm = $this->conexao->prepare($sql);
         $stm->bindvalue(1, $model->cep);
@@ -33,6 +34,7 @@ class EnderecoDAO
     public function select()
     {
         $sql = "SELECT * FROM endereco";
+
         $stm = $this ->conexao -> prepare($sql)->execute();
         
 

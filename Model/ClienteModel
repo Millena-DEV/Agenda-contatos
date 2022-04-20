@@ -2,7 +2,7 @@
 
 class ClienteModel
 {
-    public $id,$nome,$idPessoa_fisica,$idPessoa_juridica,$idEndereco;
+    public $idCliente,$nome,$idPessoa_juridica,$idPessoa_Fisica,$idEndereco;
 public $rows;
     public function save(){
         include 'DAO/ClienteDAO.php';

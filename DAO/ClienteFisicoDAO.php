@@ -1,25 +1,28 @@
 <?php
 
-class ClienteDAO
+class ClienteFisicoDAO
 {
     private $conexao;
 
 
     public function __construct()
     {        
-        $dsn = "pgsql:host=localhost;port=5432;dbname=Agenda_contatos";
-          $conexao =new PDO('dsn', 'postgres', 'root');
+
+        $dsn = "pgsql:host=localhost;port=5432;dbname=Agenda";
+        $conexao = new PDO('dsn', 'postgres', '1234');
+
     }
 
-    public function insert(ClienteModel $model)
+    public function insert(ClienteModelFisico $model)
     {
-        $sql = "INSERT INTO cliente(nome) values (?)";
+        $sql = "INSERT INTO cliente(nome,) values (?)";
         $stm = $this->conexao->prepare($sql);
-        $stm->bindvalue(1, $model->nome);
+        $stm->bindvalue(1, $model->cpf);
         $stm->execute();
+        
     }
 
-    public function update(ClienteModel $model)
+    public function update(ClienteModelFisico $model)
     {
     }
 
@@ -34,7 +37,6 @@ class ClienteDAO
 
     public function delete()
     {
-        
     }
     
  
