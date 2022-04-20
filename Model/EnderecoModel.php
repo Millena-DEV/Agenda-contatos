@@ -16,8 +16,18 @@ public function getAllRows(){
     $dao= new EnderecoDAO;
    $this->rows-> $dao->select();
 }
+public function getbyid(int $idCliente){
+    include 'DAO/EnderecoDAO.php';
+    $dao = new ClienteDAO();
+    return $dao-> selectbyid('idendereco');
+    if($obj)
+        {
+            return  $obj;
+        } else {
+            return new ClienteModel();
+        }
 
 
-
+    }
 
 }

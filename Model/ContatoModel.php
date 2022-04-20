@@ -17,7 +17,17 @@ public function getAllRows(){
    $this->rows-> $dao->select();
 }
 
+public function getbyid(int $idTipo_Contato)
+{
+    include 'DAO/TipoContatoDAO.php';
+    $dao = new ClienteDAO();
+    return $dao->selectbyid('idtipo_contato');
+    if ($obj) {
+        return  $obj;
+    } else {
+        return new ClienteModel();
+    }
 
-
+}
 
 }

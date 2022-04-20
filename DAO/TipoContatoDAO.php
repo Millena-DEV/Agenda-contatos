@@ -8,7 +8,7 @@ class TipoContatoDAO
     public function __construct()
     {
         
-        $dsn = "pgsql:host=localhost;port=5432;dbname=Agenda_banco";
+        $dsn = "pgsql:host=localhost;port=5432;dbname=Agenda_contatos";
           $conexao =new PDO('dsn', 'root', '1234');
     }
 
@@ -17,7 +17,7 @@ class TipoContatoDAO
 
     public function insert(TipoContatoModel $model)
     {
-        $sql = "INSERT INTO tipocontato(email,telefone) values (?)";
+        $sql = "INSERT INTO tipocontato(email,telefone) values (?,?)";
         $stm = $this->conexao->prepare($sql);
         $stm->bindvalue(1, $model->email);
         $stm->bindvalue(2, $model->telefone);
@@ -40,6 +40,16 @@ class TipoContatoDAO
 
     public function delete()
     {
+    }
+    public function selectbyid(int $idtipocontato){
+
+        include_once 'Model/TipoContatoModel.php';
+        $sql = "SELECT * FROM TipoContato WHERE idtipocontato = ? ";
+
+        $stm = $this->conexao->prepare($sql);
+        $stm -> binvalue (1,$id);
+        $stm -> execute();
+        return $stm-> fetchobject("TipoContatoModel");
     }
     
  
