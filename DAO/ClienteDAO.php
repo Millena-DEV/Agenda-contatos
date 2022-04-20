@@ -11,9 +11,6 @@ class ClienteDAO
           $conexao =new PDO('dsn', 'postgres', 'root');
     }
 
-
-
-
     public function insert(ClienteModel $model)
     {
         $sql = "INSERT INTO cliente(nome) values (?)";
@@ -37,6 +34,7 @@ class ClienteDAO
 
     public function delete()
     {
+        
     }
     
  
