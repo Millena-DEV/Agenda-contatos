@@ -9,12 +9,8 @@ class ClienteDAO
     {        
 
         $dsn = "pgsql:host=localhost;port=5432;dbname=Agenda_contatos";
-<<<<<<< HEAD
           $conexao =new PDO('dsn', 'postgres', 'root');
-=======
-        $conexao = new PDO('dsn', 'postgres', '1234');
 
->>>>>>> main
     }
 
     public function insert(ClienteModel $model)

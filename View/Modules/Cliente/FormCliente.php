@@ -14,18 +14,18 @@
 
     <h1> Cadastro de contato </h1> <hr>
 
-    <form name="form" class="form" action="../../../DAO/ClienteDAO" method="post">
+    <form name="form" class="form" action="../../../DAO/insert" method="post">
 
         <!-- tipo pessoa -->
         <div class="form-group">
-        <p> Qual o tipo de cliente? </p>
-          <p>          
-            <input type="radio" class="input-radio" name="tipo_pessoa" value="fisica" onclick="Pessoa(this.value); ">
-            <label> Pessoa Fisica </label>
-            
-            <input type="radio" class="input-radio" name="tipo_pessoa" value="juridica" onclick="Pessoa(this.value);">
-            <label> Pessoa Juridica </label>           
-          </p>
+          <p> Qual o tipo de cliente? </p>
+            <p>          
+              <input type="radio" class="input-radio" name="tipo_pessoa" value="fisica" onclick="Pessoa(this.value); ">
+              <label> Pessoa Fisica </label>
+              
+              <input type="radio" class="input-radio" name="tipo_pessoa" value="juridica" onclick="Pessoa(this.value);">
+              <label> Pessoa Juridica </label>           
+            </p>
         </div>
 
         <div id="fisica" style="display: none;">
@@ -89,12 +89,12 @@
         
         <div class="form-areas">
           <label for="cep"> CEP: </label>
-          <input type="text" class="form-input" name="cep" pattern="[A-Za-z].{2,}"  required />
+          <input type="text" class="form-input" name="cep" required />
         </div>
 
         <div class="form-areas">
           <label for="numero"> Número: </label>
-          <input type="text" class="form-input" name="numero" pattern="[A-Za-z].{2,}"  required />
+          <input type="text" class="form-input" name="numero"  required />
         </div>
 
         <div class="form-areas">
@@ -113,9 +113,11 @@
         </div>
    
         
+      <a href="../../../DAO/" onclick='insert()'> Cadastrar </a>
+        <!-- <button class="button_form" value=save(); type="submit"> Cadastrar </button> <br>  -->
+             
+        <button type="submit"> Salvar </button>
 
-        <button class="button_form" type="submit"> Cadastrar </button> <br> 
-                    
     </form>        
 </table>
 
