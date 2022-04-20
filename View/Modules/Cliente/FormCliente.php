@@ -31,12 +31,12 @@
         <div id="fisica" style="display: none;">
           <div class="form-areas">
             <label for="nome"> Nome: </label>
-            <input type="text" class="form-input" id="nome" name="nome" pattern="[A-Za-z].{2,}" required>
+            <input type="text" class="form-input" id="nome" value="<?= $model->nome ?>" name="nome" pattern="[A-Za-z].{2,}" required>
           </div>
                       
           <div class="form-areas">
             <label for="cpf"> CPF: </label>
-            <input type="text" maxlength="14" id="cpf" name="cpf" >
+            <input type="text" maxlength="14" id="cpf" value="<?= $model->cpf ?>" name="cpf" >
             <span id="resposta"> </span><br><br>
           </div>
         </div>
@@ -44,12 +44,12 @@
         <div id="juridica" style="display: none;">                  
             <div class="form-areas">
               <label for="nomeFantasia"> Nome Fantasia: </label>
-              <input type="text" class="form-input" id="nomeFantasia" name="nomeFantasia" pattern="[A-Za-z].{2,}" required>
+              <input type="text" class="form-input" id="nomeFantasia" value="<?= $model->nome ?>" name="nomeFantasia" pattern="[A-Za-z].{2,}" required>
             </div>
 
             <div class="form-areas">
               <label for="cnpj"> CNPJ: </label>
-              <input type="text" class="form-input" maxlength="18" id="cnpj" name="cnpj" onblur="if(!validarCNPJ(this.value)){alert('CNPJ é inválido'); this.value='';}" required>
+              <input type="text" class="form-input" maxlength="18" id="cnpj" value="<?= $model->cnpj ?>" name="cnpj" onblur="if(!validarCNPJ(this.value)){alert('CNPJ é inválido'); this.value='';}" required>
             </div>
         </div>
 
@@ -68,7 +68,7 @@
         <div id="telefone" style="display: none;">
           <div class="form-areas">
             <label for="telefone"> Telefone: </label>
-            <input type="number" class="form-input" name="telefone" patern="(\(?\d{2}\)?\s)?(\d{4,5}\-\d{4})"
+            <input type="text" class="form-input" maxlength="15" value="<?= $model->nome ?>" id="OpTelefone" name="telefone" patern="(\(?\d{2}\)?\s)?(\d{4,5}\-\d{4})"
             placeholder="(xx) xxxxx-xxxx" required />
           </div>
         </div>

@@ -7,15 +7,9 @@ class ClienteDAO
 
     public function __construct()
     {        
-<<<<<<< Updated upstream:DAO/ClienteDAO.php
+
         $dsn = "pgsql:host=localhost;port=5432;dbname=Agenda_contatos";
           $conexao =new PDO('dsn', 'postgres', 'root');
-=======
-
-        $dsn = "pgsql:host=localhost;port=5432;dbname=Agenda";
-        $conexao = new PDO('dsn', 'postgres', '1234');
-
->>>>>>> Stashed changes:DAO/CienteDAO.php
     }
 
     public function insert(ClienteModel $model)

@@ -20,6 +20,23 @@ function Contato(tipo) {
     }
 }
 
+// ============= MÁSCARA DE TELEFONE
+const inputTel = document.querySelector('#OpTelefone')
+
+inputTel.addEventListener('keypress', () => {
+    let inputTelLength = inputTel.value.length
+
+    if (inputTelLength == 0) {
+         inputTel.value += '('
+    } else if (inputTelLength == 3) {
+        inputTel.value += ')'
+    } else if (inputTelLength == 5) {
+        inputTel.value += ' '
+    } else if (inputTelLength == 10) {
+        inputTel.value += '-'
+    }
+})
+
 // ============= MÁSCARA DE CPF
 const input = document.querySelector('#cpf')
 

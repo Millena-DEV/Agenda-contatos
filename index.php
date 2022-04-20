@@ -60,7 +60,7 @@ $query_cadastros = pg_query($con, $buscar_cadastros);
                         <td><?php echo $telefone2; ?></td>
                         <td>
                             <form action="excluir.php" method="post">
-                                <input type="hidden" name="cod" value="<?php echo $cod; ?>">
+                                <a href=""></a>
                                 <button><i class='bx bx-trash bx-sm'></i></button>
                             </form>
                         </td>
