@@ -8,7 +8,7 @@ class EnderecoDAO
     public function __construct()
     {
         
-        $dsn = "pgsql:host=localhost;port=5432;dbname=Agenda_banco";
+        $dsn = "pgsql:host=localhost;port=5432;dbname=Agenda_contatos";
           $conexao =new PDO('dsn', 'root', '1234');
     }
 
@@ -43,6 +43,17 @@ class EnderecoDAO
 
     public function delete()
     {
+    }
+
+    public function selectbyid(int $idendereco){
+
+        include_once 'Model/EnderecoModel.php';
+        $sql = "SELECT * FROM endereco WHERE idendereco = ? ";
+
+        $stm = $this->conexao->prepare($sql);
+        $stm -> binvalue (1,$id);
+        $stm -> execute();
+        return $stm-> fetchobject("EnderecoModel");
     }
     
  
