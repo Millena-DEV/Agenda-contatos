@@ -1,3 +1,18 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <title> Listar contatos </title>
+    <!-- Metatags obrigatórias -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+
+</head>
+
+<body>
+
 <?php
 
 include 'Controller/ClienteController.php';
@@ -34,3 +49,11 @@ switch($url)
         echo "Erro 404";
     break;
 }
+
+?>
+
+<form action="../Agenda-contatos/View/Modules/Cliente/excluirModal.php" method="post">
+    <button><i class='bx bx-trash bx-sm'></i></button>
+
+    </div>
+</form>

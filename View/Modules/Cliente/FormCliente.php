@@ -14,7 +14,7 @@
 
     <h1> Cadastro de contato </h1> <hr>
 
-    <form name="form" class="form" action="../../../DAO/insert" method="post">
+    <form name="form" class="form" action="../../../DAO/insert" method="get">
 
         <!-- tipo pessoa -->
         <div class="form-group">
@@ -31,12 +31,12 @@
         <div id="fisica" style="display: none;">
           <div class="form-areas">
             <label for="nome"> Nome: </label>
-            <input type="text" class="form-input" id="nome" value="<?= $model->nome ?>" name="nome" pattern="[A-Za-z].{2,}" required>
+            <input type="text" class="form-input" id="nome" name="nome" pattern="[A-Za-z].{2,}" required>
           </div>
                       
           <div class="form-areas">
             <label for="cpf"> CPF: </label>
-            <input type="text" maxlength="14" id="cpf" value="<?= $model->cpf ?>" name="cpf" >
+            <input type="text" maxlength="14" id="cpf" name="cpf" >
             <span id="resposta"> </span><br><br>
           </div>
         </div>
@@ -44,12 +44,12 @@
         <div id="juridica" style="display: none;">                  
             <div class="form-areas">
               <label for="nomeFantasia"> Nome Fantasia: </label>
-              <input type="text" class="form-input" id="nomeFantasia" value="<?= $model->nome ?>" name="nomeFantasia" pattern="[A-Za-z].{2,}" required>
+              <input type="text" class="form-input" id="nomeFantasia" name="nomeFantasia" pattern="[A-Za-z].{2,}" required>
             </div>
 
             <div class="form-areas">
               <label for="cnpj"> CNPJ: </label>
-              <input type="text" class="form-input" maxlength="18" id="cnpj" value="<?= $model->cnpj ?>" name="cnpj" onblur="if(!validarCNPJ(this.value)){alert('CNPJ é inválido'); this.value='';}" required>
+              <input type="text" class="form-input" maxlength="18" id="cnpj" name="cnpj" onblur="if(!validarCNPJ(this.value)){alert('CNPJ é inválido'); this.value='';}" required>
             </div>
         </div>
 
@@ -68,7 +68,7 @@
         <div id="telefone" style="display: none;">
           <div class="form-areas">
             <label for="telefone"> Telefone: </label>
-            <input type="text" class="form-input" maxlength="15" value="<?= $model->nome ?>" id="OpTelefone" name="telefone" patern="(\(?\d{2}\)?\s)?(\d{4,5}\-\d{4})"
+            <input type="text" class="form-input" maxlength="15" id="OpTelefone" name="telefone" patern="(\(?\d{2}\)?\s)?(\d{4,5}\-\d{4})"
             placeholder="(xx) xxxxx-xxxx" required />
           </div>
         </div>
@@ -81,15 +81,15 @@
             </div>
         </div>
 
-        <!-- endereco -->
+        <!-- endereco -->      
         <div class="form-areas">
-          <label for="logradouro"> Logradouro: </label>
-          <input type="text" class="form-input" name="logradouro" pattern="[A-Za-z].{2,}"  required />
+          <label for="cep"> CEP: </label>
+          <input name="cep" type="text" id="cep" class="mascCEP" name="cep" maxlength="9" onblur="pesquisacep(this.value);" required />
         </div>
         
         <div class="form-areas">
-          <label for="cep"> CEP: </label>
-          <input type="text" class="form-input" name="cep" required />
+          <label for="logradouro"> Logradouro: </label>
+          <input type="text" class="form-input" name="logradouro" pattern="[A-Za-z].{2,}"  required />
         </div>
 
         <div class="form-areas">
@@ -98,18 +98,23 @@
         </div>
 
         <div class="form-areas">
+          <label for="rua"> Rua: </label>
+          <input name="rua" type="text" id="rua"  required />
+        </div>
+
+        <div class="form-areas">
           <label for="bairro"> Bairro: </label>
-          <input type="text" class="form-input" name="bairro" pattern="[A-Za-z].{2,}"  required />
+          <input name="bairro" type="text" id="bairro" required />
         </div>
 
         <div class="form-areas">
           <label for="cidade"> Cidade: </label>
-          <input type="text" class="form-input" name="cidade" pattern="[A-Za-z].{2,}"  required />
+          <input name="cidade" type="text" id="cidade" required />
         </div>
 
         <div class="form-areas">
           <label for="estado"> Estado: </label>
-          <input type="text" class="form-input" name="estado" pattern="[A-Za-z].{2,}"  required />
+          <input name="uf" type="text" id="uf" required />
         </div>
    
         

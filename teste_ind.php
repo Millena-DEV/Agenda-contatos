@@ -59,7 +59,7 @@ $query_cadastros = pg_query($con, $buscar_cadastros);
                         <td><?php echo $telefone; ?></td>
                         <td><?php echo $telefone2; ?></td>
                         <td>
-                            <form action="excluir.php" method="post">
+                            <form action="excluirModal.php" method="post">
                                 <a href=""></a>
                                 <button><i class='bx bx-trash bx-sm'></i></button>
                             </form>
@@ -88,11 +88,6 @@ $query_cadastros = pg_query($con, $buscar_cadastros);
         </table>
     </div>
 
-    <!-- JavaScript opcional -->
-    <!-- jQuery primeiro, depois Popper.js, depois Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integridade="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integridade="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integridade="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-</body>
+    </body>
 
 </html>
