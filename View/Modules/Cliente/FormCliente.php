@@ -14,7 +14,7 @@
 
     <h1> Cadastro de contato </h1> <hr>
 
-    <form name="form" class="form" action="../../../DAO/insert" method="get">
+    <form name="form" class="form" action="../../../DAO/Cadastrar.php" method="get">
 
         <!-- tipo pessoa -->
         <div class="form-group">
@@ -118,7 +118,7 @@
         </div>
    
         
-      <a href="../../../DAO/" onclick='insert()'> Cadastrar </a>
+      <a href="../../../DAO/Cadastrar.php" onclick='insert()'> Cadastrar </a>
         <!-- <button class="button_form" value=save(); type="submit"> Cadastrar </button> <br>  -->
              
         <button type="submit"> Salvar </button>
